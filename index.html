@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-hBTnZGSVQ1StjuVzhNVn6s9rc326NdWsZQUEAEQOZRg='; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src https://cdn.jsdelivr.net data:; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-kafxxjsAZ+OiFzOOlhGq8GSrlWUnRzAtUhUxtut3mXc='; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src https://cdn.jsdelivr.net data:; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -1651,6 +1651,12 @@ kbd{
 }
 /* SATVRN: an editorial resource library, retaining the original violet identity. */
 :root{--r-lg:20px;--r-xl:28px}
+[data-theme="light"] .dialog-label,[data-theme="light"] .settings-kicker,[data-theme="light"] #detail-status{color:#4930a4}.vault-dialog.settings-dialog h2{font-size:34px;letter-spacing:-.04em}
+:root{--vault-accent:#b8a5ff}.settings-trigger{flex-shrink:0}.settings-intro{color:var(--text-secondary);font-size:13px;line-height:1.7}.settings-grid{margin:24px 0;display:grid;gap:0}.settings-row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 0;border-bottom:1px solid var(--glass-border)}.settings-row strong{font-size:14px}.settings-row small{display:block;max-width:290px;margin-top:6px;font-size:12px;line-height:1.6;color:var(--text-muted)}.settings-row select{border:1px solid var(--glass-border);border-radius:10px;padding:10px;background:var(--surface-2);color:var(--text-primary);font:inherit;max-width:150px}.settings-row input{width:22px;height:22px;accent-color:var(--violet);flex-shrink:0}.settings-privacy{background:var(--surface-2);padding:20px;border-radius:16px;margin:0 0 22px}.settings-kicker{font-size:10px;letter-spacing:.15em;color:var(--violet-2)}.settings-privacy p{font-size:12px;line-height:1.7;margin:12px 0;color:var(--text-secondary)}#settings-favorites-count{font-size:11px;color:var(--text-muted)}
+.hcard{position:relative;overflow:hidden}.hcard::after{content:'↗';position:absolute;right:20px;top:22px;color:var(--text-muted);font-size:18px;transition:transform .2s}.hcard:hover::after{transform:translate(2px,-2px);color:var(--violet-2)}.category-count{border-top:1px solid var(--glass-border);padding-top:12px;letter-spacing:.03em}.vault-strip{background:linear-gradient(110deg,var(--surface-1),var(--glass-bg));box-shadow:0 18px 60px #0001}.resource-wrap .file-card:hover{border-color:var(--violet);box-shadow:0 12px 35px #0002}.resource-wrap .file-card .fc-meta{color:var(--text-secondary)}.detail-facts #detail-status{color:var(--violet-2);background:var(--violet-glow)}.dialog-label{display:block}.settings-dialog h2{font-size:34px;letter-spacing:-.04em}.settings-dialog{max-height:85dvh;overflow:auto}
+[data-density="compact"] .resource-wrap .file-card{min-height:140px;padding:20px 15px;gap:10px}[data-density="compact"] .file-grid{grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:10px}[data-density="compact"] .file-grid.list-view .resource-wrap .file-card{min-height:58px;padding-right:90px}[data-density="compact"] .file-grid.list-view .resource-actions{top:14px}
+[data-motion="reduced"] *,[data-motion="reduced"] *::before,[data-motion="reduced"] *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}[data-motion="reduced"] .hero-orbit,[data-motion="reduced"] .hero-orbit2{display:none}
+@media(max-width:520px){.settings-row{gap:12px}.settings-row select{max-width:125px}.settings-dialog h2{font-size:28px}[data-density="compact"] .file-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 body{background:var(--bg);font-size:14px}
 [data-theme="dark"]{--text-muted:#aaa6c3;--text-secondary:#c3bfd8}.nav-btn{color:var(--text-secondary)}
 [data-theme="light"]{--text-muted:#67617d;--violet-3:#4930a4}[data-theme="light"] .hero-title{background:linear-gradient(120deg,#17102e,#6345cb);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}[data-theme="light"] .nav-btn.active{color:#4930a4}
@@ -1758,7 +1764,7 @@ body{background:var(--bg);font-size:14px}
       </div>
       <div class="search-dropdown" id="search-dropdown"></div>
     </div>
-    <button class="icon-btn btn-theme" id="btn-theme" title="Toggle theme" aria-label="Toggle light/dark mode">
+    <button class="icon-btn settings-trigger" type="button" data-open-settings aria-label="Open settings" title="Settings"><i class="ti ti-adjustments-horizontal" aria-hidden="true"></i></button><button class="icon-btn btn-theme" id="btn-theme" title="Toggle theme" aria-label="Toggle light/dark mode">
       <i class="ti ti-moon"></i><i class="ti ti-sun"></i>
     </button>
     <button class="icon-btn btn-notify" id="btn-notify" title="Updates"><i class="ti ti-bell"></i><span class="notify-badge"></span></button>
@@ -2081,7 +2087,8 @@ body{background:var(--bg);font-size:14px}
   </div>
 </div>
 
-<dialog class="vault-dialog" id="resource-dialog" aria-labelledby="detail-name"><div class="dialog-top"><span class="dialog-label">RESOURCE / SATVRN VAULT</span><button class="vault-btn" id="detail-close" aria-label="Close details">✕</button></div><h2 id="detail-name"></h2><p class="detail-path" id="detail-path"></p><div class="detail-facts"><span id="detail-size"></span><span id="detail-status"></span></div><div class="detail-links" id="detail-links"></div><p class="detail-note" id="detail-note"></p></dialog><footer class="vault-footer"><div><strong>SATVRN / Editing Resources Vault</strong><span>Downloads hosted externally · No site account required</span><span>Ctrl / ⌘ K to search · Esc to close</span></div><a class="vault-btn" id="export-missing" href="./file-mancanti.txt" download="satvrn-missing-files.txt">Download missing files list ↓</a><button class="vault-btn" id="vault-top">Back to top ↑</button></footer>
+<dialog class="vault-dialog" id="resource-dialog" aria-labelledby="detail-name"><div class="dialog-top"><span class="dialog-label">RESOURCE / SATVRN VAULT</span><button class="vault-btn" id="detail-close" aria-label="Close details">✕</button></div><h2 id="detail-name"></h2><p class="detail-path" id="detail-path"></p><div class="detail-facts"><span id="detail-size"></span><span id="detail-status"></span></div><div class="detail-links" id="detail-links"></div><p class="detail-note" id="detail-note"></p></dialog><footer class="vault-footer"><div><strong>SATVRN / Editing Resources Vault</strong><span>Downloads hosted externally · No site account required</span><span>Ctrl / ⌘ K to search · Esc to close</span></div><a class="vault-btn" id="export-missing" href="./file-mancanti.txt" download="satvrn-missing-files.txt">Download missing files list ↓</a><button class="vault-btn" type="button" data-open-settings>Settings</button><button class="vault-btn" id="vault-top">Back to top ↑</button></footer>
+<dialog class="vault-dialog settings-dialog" id="settings-dialog" aria-labelledby="settings-title"><div class="dialog-top"><span class="dialog-label">YOUR VAULT / YOUR WAY</span><button class="vault-btn" id="settings-close" aria-label="Close settings">✕</button></div><h2 id="settings-title">Make it yours.</h2><p class="settings-intro">A quieter view, a denser library, your preferred theme. Saved on this device.</p><div class="settings-grid"><label class="settings-row"><span><strong>Theme</strong><small>Choose your workspace lighting.</small></span><select id="settings-theme"><option value="dark">Dark</option><option value="light">Light</option></select></label><label class="settings-row"><span><strong>Card spacing</strong><small>Fit more resources in your view.</small></span><select id="settings-density"><option value="comfortable">Comfortable</option><option value="compact">Compact</option></select></label><label class="settings-row"><span><strong>Reduce motion</strong><small>Pause the animated background and transitions. System preferences are always respected.</small></span><input id="settings-motion" type="checkbox"></label></div><div class="settings-privacy"><span class="settings-kicker">PRIVATE BY DESIGN</span><p>No site account. No analytics. Preferences and favorites stay in your browser. Downloads open on external providers.</p><span id="settings-favorites-count"></span></div><button class="vault-btn" id="settings-reset">Reset display settings</button></dialog>
 <!-- TOAST -->
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -2126,7 +2133,7 @@ body{background:var(--bg);font-size:14px}
 
 /* ─── AURORA ─── */
 (function(){
-  var c=document.getElementById('aurora-canvas'),ctx=c.getContext('2d'),W,H,t=0;if(!ctx)return;var reduced=matchMedia('(prefers-reduced-motion: reduce)');
+  var c=document.getElementById('aurora-canvas'),ctx=c.getContext('2d'),W,H,t=0,raf=0;if(!ctx)return;var reduced=matchMedia('(prefers-reduced-motion: reduce)');
   function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
   resize();window.addEventListener('resize',resize,{passive:true});
   var blobs=[
@@ -2135,16 +2142,16 @@ body{background:var(--bg);font-size:14px}
     {x:-.08,y:.52,r:.38,color:[90,175,245],speed:.0005,ox:Math.PI*.7}
   ];
   function draw(){
-    ctx.clearRect(0,0,W,H);
+    raf=0;ctx.clearRect(0,0,W,H);
     blobs.forEach(function(b){
       var x=(b.x+Math.sin(t*b.speed+b.ox)*.16)*W,y=(b.y+Math.cos(t*b.speed*1.3+b.ox)*.13)*H,r=b.r*Math.max(W,H);
       var g=ctx.createRadialGradient(x,y,0,x,y,r);
       g.addColorStop(0,'rgba('+b.color+',0.20)');g.addColorStop(1,'rgba('+b.color+',0)');
       ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill()
     });
-    t++;if(!reduced.matches&&!document.hidden)requestAnimationFrame(draw)
+    t++;if(!reduced.matches&&!document.hidden&&document.documentElement.dataset.motion!=='reduced')raf=requestAnimationFrame(draw)
   }
-  draw();document.addEventListener('visibilitychange',function(){if(!document.hidden&&!reduced.matches)draw()});reduced.addEventListener('change',function(){if(!reduced.matches)draw()});
+  function syncAurora(){if(raf){cancelAnimationFrame(raf);raf=0}if(!document.hidden&&!reduced.matches&&document.documentElement.dataset.motion!=='reduced')draw()}draw();document.addEventListener('visibilitychange',syncAurora);document.addEventListener('vault-motion-change',syncAurora);reduced.addEventListener('change',syncAurora);
 })();
 
 /* ─── RIPPLE ─── */
@@ -2213,7 +2220,7 @@ function runSearch(q){if(!q.trim()||!searchIndex.length)return[];var ql=q.toLowe
 function loadTree(cb){
   if(fileTree){if(!searchIndex.length){searchIndex=[];buildSearchIndex(fileTree,'')}cb&&cb(null,fileTree);return}
   if(cb)treeCallbacks.push(cb);if(treeLoading)return;treeLoading=true;
-  fetch('./catalog.json?v=774398fb5438a25a',{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(function(d){d=validateVaultCatalog(d);fileTree=d;searchIndex=[];buildSearchIndex(d,'');treeLoading=false;updateHeroStats(d);var cbs=treeCallbacks.splice(0);cbs.forEach(function(fn){fn(null,d)})}).catch(function(e){treeLoading=false;var cbs=treeCallbacks.splice(0);cbs.forEach(function(fn){fn(e,null)})})
+  fetch('./catalog.json?v=1207cef072cc9e48',{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()}).then(function(d){d=validateVaultCatalog(d);fileTree=d;searchIndex=[];buildSearchIndex(d,'');treeLoading=false;updateHeroStats(d);var cbs=treeCallbacks.splice(0);cbs.forEach(function(fn){fn(null,d)})}).catch(function(e){treeLoading=false;var cbs=treeCallbacks.splice(0);cbs.forEach(function(fn){fn(e,null)})})
 }
 function countNodes(nodes){var files=0,size=0;nodes.forEach(function(n){if(n.type==='folder'&&n.children){var c=countNodes(n.children);files+=c.files;size+=c.size}else{files++;size+=n.size||0}});return{files:files,size:size}}
 function updateHeroStats(tree){var c=countNodes(tree);document.getElementById('stat-files').textContent=c.files.toLocaleString();document.getElementById('stat-size').textContent=formatSize(c.size);var available=0;function walk(nodes){nodes.forEach(function(n){if(n.children)walk(n.children);else if(n.status==='ready')available++})}walk(tree);document.getElementById('stat-online').textContent=available.toLocaleString()}
@@ -2275,7 +2282,7 @@ function renderFiles(){
     sorted.forEach(function(item,idx){
       var card=document.createElement('button');card.className='file-card ripple-host';card.title=item.name;
       card.style.animationDelay=(idx*.022)+'s';card.style.animation='card-rise .38s cubic-bezier(.22,1,.36,1) both';
-      var ico=getIcon(item);var meta=item.type==='folder'?(item.children?item.children.length:0)+' items':formatSize(item.size)+' · '+(item.status==='ready'?'Download · '+escapeHTML(item.links[0].provider):item.status==='awaiting-link'?'Uploaded to MEGA · link awaiting assignment':item.status==='unavailable'?'Temporarily unavailable':'Awaiting upload');
+      var ico=getIcon(item);var meta=item.type==='folder'?(item.children?item.children.length:0)+' items':resourceSize(item)+' · '+(item.status==='ready'?'Download · '+escapeHTML(item.links[0].provider):item.status==='awaiting-link'?'Uploaded to MEGA · link awaiting assignment':item.status==='unavailable'?'Temporarily unavailable':'Awaiting upload');
       card.innerHTML='<div class="dl-progress"><div class="dl-progress-bar" id="dlbar-'+idx+'"></div></div><div class="fc-icon"><i class="ti '+ico.cls+'" style="color:'+ico.color+'"></i></div><div class="fc-name" title="'+escapeHTML(item.name)+'">'+escapeHTML(item.name)+'</div><div class="fc-meta">'+meta+'</div>';
       addRipple(card);
       if(item.type==='folder'){
@@ -2361,15 +2368,15 @@ if(!Array.isArray(vaultFavorites))vaultFavorites=[];
 vaultFavorites=vaultFavorites.filter(function(s){return typeof s==='string'&&s.length<500}).slice(0,500);
 vaultFavorites=[...new Set(vaultFavorites.map(function(rel){var aliases={"ofx plugin/FilmConvert Bundle Win - satvrn.7z":"plugin/FilmConvert Bundle Win - satvrn.7z","ofx plugin/IgnitePro 2021.1 Adobe & OFX WIN - satvrn.7z":"plugin/IgnitePro 2021.1 Adobe & OFX WIN - satvrn.7z","ofx plugin/RedGiant.v2026.3.0 Win - satvrn.7z":"plugin/RedGiant.v2026.3.0 Win - satvrn.7z"};return Object.prototype.hasOwnProperty.call(aliases,rel)?aliases[rel]:rel}))];
 function saveFavorites(){try{localStorage.setItem('satvrn_favorites',JSON.stringify(vaultFavorites))}catch(e){showToast('Favorites could not be saved on this device.',false,true)}}
-function isSafeResourceUrl(value){try{var u=new URL(value);if(u.protocol!=='https:'||u.username||u.password||u.port)return false;return (u.hostname==='github.com'&&/^\/[^/]+\/[^/]+\/releases\/download\//.test(u.pathname))||(u.hostname==='drive.google.com'&&/^\/file\/d\/[\w-]+\/view$/.test(u.pathname))||((u.hostname==='www.mediafire.com'||u.hostname==='mediafire.com')&&u.pathname.indexOf('/file/')===0)||(u.hostname==='mega.nz'&&/^\/file\/[\w-]{8}$/.test(u.pathname)&&/^#[\w-]{43}$/.test(u.hash))}catch(e){return false}}
-function validateVaultCatalog(tree){var total=0,seen=new Set();function scan(nodes,depth){if(!Array.isArray(nodes)||depth>10)throw Error('Invalid catalog');nodes.forEach(function(n){if(++total>5000||!n||typeof n.name!=='string'||n.name.length>500||typeof n.rel!=='string'||n.rel.length>1000||seen.has(n.rel))throw Error('Invalid resource');seen.add(n.rel);if(n.children)scan(n.children,depth+1);else{if(!Number.isSafeInteger(n.size)||n.size<0||!Array.isArray(n.links)||n.links.length>10)throw Error('Invalid metadata');n.links.forEach(function(l){if(!l||typeof l.provider!=='string'||l.provider.length>40||!isSafeResourceUrl(l.url))throw Error('Invalid download destination')});if(n.status==='ready'&&!n.links.length)throw Error('Missing ready link')}})}scan(tree,0);return tree}
+function isSafeResourceUrl(value){if(typeof value!=="string"||value.length>2048)return false;try{var u=new URL(value);if(u.protocol!=='https:'||u.username||u.password||u.port)return false;return (u.hostname==='github.com'&&/^\/[^/]+\/[^/]+\/releases\/download\//.test(u.pathname))||(u.hostname==='drive.google.com'&&/^\/file\/d\/[\w-]+\/view$/.test(u.pathname))||((u.hostname==='www.mediafire.com'||u.hostname==='mediafire.com')&&u.pathname.indexOf('/file/')===0)||(u.hostname==='mega.nz'&&/^\/file\/[\w-]{8}$/.test(u.pathname)&&/^#[\w-]{43}$/.test(u.hash))}catch(e){return false}}
+function validateVaultCatalog(tree){var total=0,seen=new Set();function scan(nodes,depth){if(!Array.isArray(nodes)||depth>10)throw Error('Invalid catalog');nodes.forEach(function(n){if(++total>5000||!n||typeof n.name!=='string'||n.name.length>500||typeof n.rel!=='string'||n.rel.length>1000||seen.has(n.rel))throw Error('Invalid resource');seen.add(n.rel);if(n.children)scan(n.children,depth+1);else{if(!["ready","pending","awaiting-link","unavailable"].includes(n.status)||!Number.isSafeInteger(n.size)||n.size<0||!Array.isArray(n.links)||n.links.length>10)throw Error('Invalid metadata');n.links.forEach(function(l){if(!l||typeof l.provider!=='string'||l.provider.length>40||!isSafeResourceUrl(l.url)||!vaultProviderMatches(l))throw Error('Invalid download destination')});if(n.status==='ready'&&!n.links.length)throw Error('Missing ready link')}})}scan(tree,0);return tree}
 function flattenVault(nodes){var out=[];(nodes||[]).forEach(function(n){if(n.children)out=out.concat(flattenVault(n.children));else out.push(n)});return out}
 function vaultMatches(n){if(n.children)return flattenVault(n.children).some(vaultMatches);return(vaultAvailability==='all'||(vaultAvailability==='ready'?n.status==='ready':n.status!=='ready'))&&(vaultAvailability==='pending'||vaultProvider==='all'||n.links.some(function(l){return l.provider===vaultProvider}))&&(!vaultOnlyFavorites||vaultFavorites.indexOf(n.rel)!==-1)}
 function vaultNodesForView(nodes){return vaultAvailability==='pending'?flattenVault(nodes):nodes}
 function setVaultAvailability(value){vaultAvailability=value;if(value==='pending'){vaultProvider='all';vaultOnlyFavorites=false;browserFilter='';document.getElementById('browser-filter-input').value=''}syncVaultFilters();renderFiles()}
 function toggleFavorite(rel){var i=vaultFavorites.indexOf(rel);if(i===-1)vaultFavorites.push(rel);else vaultFavorites.splice(i,1);saveFavorites();renderFiles();showToast(i===-1?'Added to favorites':'Removed from favorites',true)}
 function enhanceResourceCard(card,item){if(item.children)return card;var wrap=document.createElement('div');wrap.className='resource-wrap';wrap.appendChild(card);var tools=document.createElement('div');tools.className='resource-actions';var fav=document.createElement('button');fav.type='button';fav.className='resource-tool';fav.textContent='★';fav.title='Save to favorites';fav.setAttribute('aria-label','Favorite: '+item.name);fav.setAttribute('aria-pressed',String(vaultFavorites.indexOf(item.rel)!==-1));fav.addEventListener('click',function(){toggleFavorite(item.rel)});var detail=document.createElement('button');detail.type='button';detail.className='resource-tool';detail.textContent='↗';detail.title='Details and alternate links';detail.setAttribute('aria-label','Details: '+item.name);detail.addEventListener('click',function(){showResourceDetails(item)});tools.append(fav,detail);wrap.appendChild(tools);return wrap}
-function showResourceDetails(item){var dialog=document.getElementById('resource-dialog');document.getElementById('detail-name').textContent=item.name;document.getElementById('detail-path').textContent=item.rel.split('/').slice(0,-1).join(' / ');document.getElementById('detail-size').textContent=formatSize(item.size);document.getElementById('detail-status').textContent=item.status==='ready'?'Available':'Awaiting upload';var links=document.getElementById('detail-links');links.replaceChildren();item.links.forEach(function(l){if(!isSafeResourceUrl(l.url))return;var a=document.createElement('a');a.className='detail-link';a.href=l.url;a.target='_blank';a.rel='noopener noreferrer';var name=document.createElement('span');name.textContent='Download from '+l.provider;var arrow=document.createElement('span');arrow.textContent='↗';a.append(name,arrow);links.appendChild(a)});document.getElementById('detail-note').textContent=item.links.length?'The download opens on your chosen provider. Archive password, if required: star.':'This archive is listed in the catalog but has not been uploaded yet.';dialog.showModal()}
+function showResourceDetails(item){var dialog=document.getElementById('resource-dialog');document.getElementById('detail-name').textContent=item.name;document.getElementById('detail-path').textContent=item.rel.split('/').slice(0,-1).join(' / ');document.getElementById('detail-size').textContent=resourceSize(item);document.getElementById('detail-status').textContent=item.status==='ready'?'Available':'Awaiting upload';var links=document.getElementById('detail-links');links.replaceChildren();item.links.forEach(function(l){if(!isSafeResourceUrl(l.url))return;var a=document.createElement('a');a.className='detail-link';a.href=l.url;a.target='_blank';a.rel='noopener noreferrer';var name=document.createElement('span');name.textContent='Download from '+l.provider;var arrow=document.createElement('span');arrow.textContent='↗';a.append(name,arrow);links.appendChild(a)});document.getElementById('detail-note').textContent=item.links.length?'The download opens on your chosen provider. Archive password, if required: star.':'This archive is listed in the catalog but has not been uploaded yet.';dialog.showModal()}
 function openVaultFilter(availability,favorites){vaultAvailability=availability;vaultOnlyFavorites=!!favorites;vaultProvider='all';syncVaultFilters();goBrowser('archive')}
 function syncVaultFilters(){document.querySelectorAll('[data-availability]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.availability===vaultAvailability))});document.getElementById('favorites-filter').setAttribute('aria-pressed',String(vaultOnlyFavorites));var provider=document.getElementById('provider-filter');provider.value=vaultProvider;provider.disabled=vaultAvailability==='pending';provider.title=vaultAvailability==='pending'?'Files awaiting upload do not have a download provider yet.':'Filter by download provider'}
 function vaultCatalogLoaded(tree){var all=flattenVault(tree),ready=all.filter(function(n){return n.status==='ready'}).length,pending=all.length-ready;document.getElementById('vault-online-count').textContent=ready;document.getElementById('vault-pending-count').textContent=pending;document.querySelectorAll('.hcard').forEach(function(card){var sub=card.id.replace('hcard-','');if(!browserMeta[sub])return;var folder=browserMeta[sub].folder;var entries=folder?all.filter(function(n){return n.rel.split('/')[0]===folder}):all;var label=card.querySelector('.category-count');if(!label){label=document.createElement('span');label.className='category-count';card.appendChild(label)}label.textContent=entries.filter(function(n){return n.status==='ready'}).length+' / '+entries.length+' available'})}
@@ -2386,6 +2393,30 @@ function setupVaultUpgrade(){
  document.getElementById('vault-top').addEventListener('click',function(){window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})});
  loadTree(function(err,tree){if(!err)vaultCatalogLoaded(tree)});
 }
+
+function vaultProviderMatches(link){try{var hosts={GitHub:["github.com"],MEGA:["mega.nz"],MediaFire:["mediafire.com","www.mediafire.com"],"Google Drive":["drive.google.com"]};return Object.prototype.hasOwnProperty.call(hosts,link.provider)&&hosts[link.provider].includes(new URL(link.url).hostname)}catch(e){return false}}
+
+var vaultPreferences=storageRead('satvrn_preferences',{});
+if(!vaultPreferences||typeof vaultPreferences!=='object'||Array.isArray(vaultPreferences))vaultPreferences={};
+function applyVaultPreferences(){
+ document.documentElement.dataset.density=vaultPreferences.density==='compact'?'compact':'comfortable';
+ document.documentElement.dataset.motion=vaultPreferences.reduceMotion===true?'reduced':'system';
+ document.dispatchEvent(new Event('vault-motion-change'));
+}
+function saveVaultPreferences(){try{localStorage.setItem('satvrn_preferences',JSON.stringify(vaultPreferences))}catch(e){showToast('Settings could not be saved on this device.',false,true)}applyVaultPreferences()}
+function setupVaultSettings(){
+ var panel=document.getElementById('settings-dialog');
+ function open(){document.getElementById('settings-theme').value=getTheme();document.getElementById('settings-density').value=vaultPreferences.density==='compact'?'compact':'comfortable';document.getElementById('settings-motion').checked=vaultPreferences.reduceMotion===true;document.getElementById('settings-favorites-count').textContent=vaultFavorites.length+' saved favorites';panel.showModal()}
+ document.querySelectorAll('[data-open-settings]').forEach(function(b){b.addEventListener('click',open)});
+ document.getElementById('settings-close').addEventListener('click',function(){panel.close()});
+ panel.addEventListener('click',function(e){if(e.target===panel){var r=panel.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)panel.close()}});
+ document.getElementById('settings-theme').addEventListener('change',function(){if(this.value==='dark'||this.value==='light')setTheme(this.value)});
+ document.getElementById('settings-density').addEventListener('change',function(){vaultPreferences.density=this.value==='compact'?'compact':'comfortable';saveVaultPreferences()});
+ document.getElementById('settings-motion').addEventListener('change',function(){vaultPreferences.reduceMotion=this.checked;saveVaultPreferences()});
+ document.getElementById('settings-reset').addEventListener('click',function(){vaultPreferences={};saveVaultPreferences();document.getElementById('settings-density').value='comfortable';document.getElementById('settings-motion').checked=false;showToast('Display settings reset. Your favorites were kept.',true)});
+ applyVaultPreferences();
+}
+function resourceSize(item){return item.sizeUnknown?'Size not provided':formatSize(Number(item.size))}
 
 var appInited=false;
 function init(){
@@ -2447,7 +2478,7 @@ function init(){
   document.getElementById('mobile-nav-drawer').addEventListener('touchend',function(e){if(startX-e.changedTouches[0].clientX>55)closeMobileNav()},{passive:true});
 
   loadTree(function(){});
-  setupToc();setupVaultUpgrade()
+  setupToc();setupVaultUpgrade();setupVaultSettings()
 }
 document.getElementById('topnav').style.display='flex';init();
 })();
