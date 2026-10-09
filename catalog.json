@@ -1102,8 +1102,13 @@
         "type": "file",
         "size": 7955213437,
         "mtime": "2026-06-28T14:54:41.344Z",
-        "links": [],
-        "status": "pending",
+        "links": [
+          {
+            "provider": "MEGA",
+            "url": "https://mega.nz/file/PzZ33DZB#_A4LMQZbh7sgZczZd03TieyJVdkTKx2xBz-pf2JGXyo"
+          }
+        ],
+        "status": "ready",
         "downloadType": "external"
       },
       {
@@ -2771,6 +2776,36 @@
         ],
         "status": "ready",
         "downloadType": "external"
+      },
+      {
+        "name": "Sapphire 2025.52 - Win - Keyflame.7z",
+        "rel": "plugin/Sapphire 2025.52 - Win - Keyflame.7z",
+        "type": "file",
+        "size": 0,
+        "sizeUnknown": true,
+        "links": [
+          {
+            "provider": "MEGA",
+            "url": "https://mega.nz/file/v3xwUQAb#LxPpp9c0AHCXPkxq-MIKghWIv8G_RrmVKK7ifZ_8acM"
+          }
+        ],
+        "status": "ready",
+        "downloadType": "external"
+      },
+      {
+        "name": "Continuum 2025.5 v18.5.1 - Win - Keyflame.7z",
+        "rel": "plugin/Continuum 2025.5 v18.5.1 - Win - Keyflame.7z",
+        "type": "file",
+        "size": 0,
+        "sizeUnknown": true,
+        "links": [
+          {
+            "provider": "MEGA",
+            "url": "https://mega.nz/file/26QxlSZb#F2e6_Q58IAi_RXq2L68u6CUDGoY1amK-2vLB2abuv0I"
+          }
+        ],
+        "status": "ready",
+        "downloadType": "external"
       }
     ]
   },
@@ -3918,8 +3953,13 @@
         "type": "file",
         "size": 3296133486,
         "mtime": "2026-06-24T17:30:40.000Z",
-        "links": [],
-        "status": "pending",
+        "links": [
+          {
+            "provider": "MEGA",
+            "url": "https://mega.nz/file/byhHhC5L#xa1RafDzEo6lNhCiKOveZv_0LYKcLgFYc_IIDdfJBno"
+          }
+        ],
+        "status": "ready",
         "downloadType": "external"
       },
       {
