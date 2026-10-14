@@ -3755,8 +3755,13 @@
         "type": "file",
         "size": 3623833531,
         "mtime": "2026-06-24T17:25:02.000Z",
-        "links": [],
-        "status": "pending",
+        "links": [
+          {
+            "provider": "MEGA",
+            "url": "https://mega.nz/file/um5lTBrR#fTVaYAnydT2IZdAKqa6ox0NjQDz1N-VyGTrXPmeSaCc"
+          }
+        ],
+        "status": "ready",
         "downloadType": "external"
       },
       {
@@ -3795,8 +3800,13 @@
         "type": "file",
         "size": 4886171845,
         "mtime": "2026-06-24T17:32:35.000Z",
-        "links": [],
-        "status": "pending",
+        "links": [
+          {
+            "provider": "MEGA",
+            "url": "https://mega.nz/file/m3gDhLrB#Y1nr_8-JONoxvQPZy-KVu4W-ki4-yVW8DsPxnYzH3W0"
+          }
+        ],
+        "status": "ready",
         "downloadType": "external"
       },
       {
@@ -3948,8 +3958,13 @@
         "type": "file",
         "size": 5859846327,
         "mtime": "2026-06-24T17:40:33.000Z",
-        "links": [],
-        "status": "pending",
+        "links": [
+          {
+            "provider": "MEGA",
+            "url": "https://mega.nz/file/auRDHZpT#lsmFSOISGusHEow1apqVAbv6SpRj1ei58h758DWhsb4"
+          }
+        ],
+        "status": "ready",
         "downloadType": "external"
       },
       {
@@ -3958,8 +3973,13 @@
         "type": "file",
         "size": 3360682153,
         "mtime": "2026-06-24T17:15:06.000Z",
-        "links": [],
-        "status": "pending",
+        "links": [
+          {
+            "provider": "MEGA",
+            "url": "https://mega.nz/file/v3Y0iQqQ#eIo3S20UVG1adHEO4GqzqJD8zwKeUIOYE2p6Fj4Xk6o"
+          }
+        ],
+        "status": "ready",
         "downloadType": "external"
       },
       {
