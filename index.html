@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-qFYdutSZcLbZ85UA2ZnMpWUY/kRTcj+djdR4paw+le0='; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src https://cdn.jsdelivr.net data:; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-gje2Grqnk5s0MsXPn+Af1mc7Y5plvPKkIxj0tsZBwr4='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; connect-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="no-referrer">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
@@ -9,7 +9,7 @@
 <meta name="description" content="Your library of editing software, plugins, presets and resources. Search, save favorites and choose your download provider.">
 <meta name="theme-color" content="#080720">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='32' y2='32'%3E%3Cstop offset='0' stop-color='%23c9bcff'/%3E%3Cstop offset='1' stop-color='%234a2fe0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M16 6L18.2 13.8L26 16L18.2 18.2L16 26L13.8 18.2L6 16L13.8 13.8Z' fill='%23fff'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" integrity="sha384-Amzn4olt1DzKcamnc0ejzdJkVXDZuUXYZfSa4DKiYWKLMewTbAgmuDzqK0zufsXe" crossorigin="anonymous">
+<link rel="stylesheet" href="./assets/tabler-icons.css?v=cd07b8a7b625" integrity="sha384-lajN9zElgyDVyFhXWp3lz/M5RAaBuUlrnayqn1ggi7zyuOhKcS0qUtpllZvenGzq">
 <style>
 .file-card .fc-name{white-space:normal;overflow-wrap:anywhere;line-height:1.45}.file-card:disabled{cursor:default}.file-grid.list-view .fc-name{white-space:normal;overflow-wrap:anywhere}
 /* ══════════════════════════════════════════════
@@ -1685,6 +1685,21 @@ body{background:var(--bg);font-size:14px}
 @media(max-width:520px){.hero-title{font-size:68px}.hero-stats{gap:18px}.hstat-label{font-size:8px}.home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hcard{padding:18px!important;min-height:170px}.hcard-title{font-size:14px}.hcard-desc{font-size:11px}.file-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.resource-wrap .file-card{padding:20px 13px;min-height:210px}.file-card .fc-name{padding-right:0;font-size:11px}.file-card .fc-icon{margin-bottom:12px}.file-grid.list-view .resource-wrap .file-card{padding-right:77px}.vault-footer{flex-direction:column}.vault-dialog{padding:22px}.hero-sub{font-size:14px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero-orbit,.hero-orbit2{display:none}}
 
+/* SATVRN release: self-contained, accessible resource library. */
+:root{--vault-mint:#b6f0d5;--vault-soft:#d5c9ff}
+[data-theme="dark"]{--bg:#0c0d17;--surface-0:#11121e;--surface-1:#171827;--surface-2:#202132;--surface-3:#292a40;--text-primary:#f5f3ff;--text-secondary:#d0ccdf;--text-muted:#a49eb9;--glass-border:#ffffff13;--glass-bg:#171827c9;--violet:#9273f8;--violet-2:#c0aaff;--violet-3:#d7c8ff;--violet-glow:#9273f822}
+[data-theme="light"]{--bg:#f5f3fa;--surface-0:#fff;--surface-1:#fff;--surface-2:#f0edf7;--surface-3:#e8e2f4;--text-primary:#252138;--text-secondary:#504861;--text-muted:#686078;--glass-border:#46365c20;--glass-bg:#ffffffd9;--violet:#7551cd;--violet-2:#6343b0;--violet-3:#503092;--violet-glow:#7551cd13;--vault-mint:#246b50}
+body{letter-spacing:-.012em}.topnav{height:76px;padding-inline:30px;background:color-mix(in srgb,var(--bg) 93%,transparent);box-shadow:0 10px 40px #0001}.topnav-logo{font-size:25px;letter-spacing:-1.4px}.nav-btn{font-size:11px;padding:10px 9px;border-radius:9px}.topnav-links{gap:3px}.topnav-right{gap:8px}.icon-btn{width:36px;height:36px;border-radius:11px;flex-shrink:0}.topnav-search{max-width:230px}.search-wrap{border-radius:11px;background:var(--surface-1)}.search-dropdown{max-height:min(480px,70dvh);overflow:auto;border-radius:17px;box-shadow:0 24px 70px #0005}.search-result-item{padding:13px 16px}.search-result-name{line-height:1.5;overflow-wrap:anywhere}.search-result-path{line-height:1.5}
+.home-hero{padding:88px 56px 64px;min-height:560px;gap:64px}.hero-title{font-size:clamp(64px,8vw,118px);line-height:.92;font-weight:800;letter-spacing:-.075em;background:linear-gradient(125deg,var(--text-primary) 25%,var(--violet-2));background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hero-sub{font-size:16px;line-height:1.85;max-width:470px}.hero-eyebrow{font-family:var(--font-mono);font-size:10px;letter-spacing:.15em;color:var(--violet-2)}.hero-eyebrow-dot{background:var(--vault-mint);box-shadow:none}.hero-actions{gap:10px;flex-wrap:wrap}.hero-actions button{min-height:46px;border-radius:12px;font-size:12px;white-space:nowrap}.hero-stats{gap:40px;margin-top:38px;padding-top:24px}.hstat-val{font-size:32px;font-weight:600;letter-spacing:-1.5px}.hstat-label{margin-top:7px;font-size:10px;color:var(--text-muted)}
+.hero-visual{min-height:380px}.hero-center-icon{width:130px;height:130px;border-radius:35px;background:linear-gradient(135deg,#beacff,#724ae4);box-shadow:0 30px 100px #7551cd45;transform:rotate(-9deg)}.hero-ring{border-color:var(--glass-border);opacity:1}.orbit-note{padding:17px 20px;border-radius:18px;background:var(--surface-1);border-color:var(--glass-border);font-size:13px;box-shadow:0 18px 55px #0002}.orbit-note span{font-size:11px;line-height:1.5}.orbit-note.one{top:7%;left:-3%}.orbit-note.two{bottom:5%;right:-2%}
+.vault-strip{padding:26px 28px;background:var(--surface-1);border-radius:20px;box-shadow:none;margin-bottom:20px}.vault-strip strong{font-size:18px;letter-spacing:-.035em}.vault-strip p{font-size:12px;line-height:1.8}.vault-strip-actions .vault-btn:first-child{background:var(--violet);color:white;border-color:var(--violet);box-shadow:0 8px 25px #7551cd28}.vault-btn,.quick-filter{min-height:40px;padding:10px 14px;font-size:12px}.home-section{padding-top:24px}.home-section-title{font-family:var(--font-mono);letter-spacing:.14em;color:var(--text-muted)}.home-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.hcard{padding:25px;min-height:190px;border-radius:19px;background:var(--surface-1);box-shadow:0 8px 24px #00000006}.hcard:hover{transform:translateY(-3px);box-shadow:0 16px 40px #0002}.hcard-title{font-size:17px;letter-spacing:-.025em}.hcard-desc{font-size:12px;line-height:1.8;max-width:220px}.category-count{color:var(--text-secondary);font-size:10px;margin-top:20px;padding-top:13px}.hcard::after{font-size:18px;right:22px;top:25px}.category-meter{display:block;height:3px;border-radius:3px;background:var(--surface-3);margin-top:11px;overflow:hidden}.category-meter-fill{height:100%;background:var(--violet);border-radius:3px;display:block}
+.page-header{padding-top:52px;padding-bottom:28px}.page-title{font-size:34px;letter-spacing:-.045em}.page-sub{font-size:13px;line-height:1.8}.browser-wrap{padding-top:26px}.browser-toolbar{gap:12px;margin-bottom:22px}.browser-search{max-width:350px;flex:1 1 240px}.browser-search input{font-size:13px}.breadcrumb{font-size:12px;padding:14px 18px;background:var(--surface-1);border-radius:13px}.vault-filters{padding:14px;background:var(--surface-1);border:1px solid var(--glass-border);border-radius:16px;gap:8px}.quick-filter{background:transparent}.provider-filter{border-radius:10px;min-height:40px}.filter-summary{font-family:var(--font-mono);font-size:10px}.file-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}.resource-wrap .file-card{min-height:200px;padding:26px 21px;border-radius:18px;background:var(--surface-1);gap:18px;text-align:left}.file-card .fc-name{font-size:13px;font-weight:600;line-height:1.6;padding-right:0}.file-card .fc-meta{font-size:11px;color:var(--text-muted);line-height:1.7}.file-card .fc-icon{font-size:32px;margin-bottom:6px}.resource-actions{right:12px;top:12px;gap:6px}.resource-tool{width:32px;height:32px;border-radius:9px;background:var(--surface-2);border:1px solid var(--glass-border);font-size:15px}.file-card:focus-visible{border-color:var(--violet)}.file-grid.list-view .resource-wrap .file-card{min-height:84px;padding:18px 106px 18px 20px;gap:15px}.file-grid.list-view .resource-actions{top:24px}.file-grid.list-view .fc-icon{margin:0}.file-grid.list-view .fc-name{flex:1;min-width:0}.file-grid.list-view .fc-meta{white-space:normal;max-width:180px}.empty-state{border:1px dashed var(--glass-border);border-radius:18px;padding:56px 25px;line-height:1.8;background:var(--surface-1);color:var(--text-secondary)}.empty-state i{color:var(--violet-2);opacity:1}
+.vault-dialog{border-radius:24px;background:var(--surface-1);max-height:85dvh;overflow:auto}.vault-dialog h2{font-size:25px;letter-spacing:-.035em}.detail-facts span{border-radius:10px}.detail-link{padding:17px 18px;min-height:52px;background:var(--surface-2)}.detail-link:focus-visible{outline-color:var(--violet)}.detail-note{font-size:12px}.dialog-label,.settings-kicker{color:var(--violet-2)}.settings-grid{margin-top:16px}.settings-row small{font-size:12px}.settings-privacy{border:1px solid var(--glass-border)}.settings-data-actions{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.settings-data-actions button{flex:1}.vault-footer{padding:30px 0 40px;font-size:12px;flex-wrap:wrap;align-items:flex-start}.vault-footer strong{font-size:13px;color:var(--text-secondary)}.vault-footer>div{flex:1;min-width:260px}.vault-footer .vault-btn{font-size:11px}.library-status{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--glass-border);border-radius:50px;font-family:var(--font-mono);font-size:10px;color:var(--text-secondary);margin-top:18px}.library-status::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--vault-mint)}
+[data-density="compact"] .resource-wrap .file-card{min-height:156px;padding:20px 17px;gap:12px}[data-density="compact"] .file-grid{grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:12px}[data-density="compact"] .file-grid.list-view .resource-wrap .file-card{min-height:74px;padding-right:106px}[data-density="compact"] .file-grid.list-view .resource-actions{top:19px}
+@media(max-width:1180px){.topnav-links,.nav-divider,.topnav-search{display:none!important}.btn-hamburger{display:flex}.topnav{padding-inline:22px}.user-pill{display:none}.home-hero{padding:60px 36px 45px;gap:40px}.home-section{padding-inline:36px}.vault-strip,.vault-footer{margin-inline:36px}.home-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-title{font-size:88px}.hero-visual{min-height:330px}.orbit-note{padding:13px 15px;max-width:250px}.mobile-nav-overlay{z-index:1000}}
+@media(max-width:900px){.hero-visual{display:none}.home-hero{grid-template-columns:1fr;padding:50px 28px 36px;min-height:auto}.hero-title{font-size:84px}.hero-sub{max-width:540px}.vault-strip{flex-direction:column;align-items:flex-start;margin-inline:28px}.vault-footer{margin-inline:28px}.home-section{padding-inline:28px}.home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.page-header{padding-inline:28px}.browser-wrap{padding-inline:28px}.provider-filter{margin-left:0}}
+@media(max-width:520px){.topnav{height:64px;padding-inline:16px}.topnav-logo{font-size:23px}.topnav-right{gap:5px}.hero-title{font-size:clamp(54px,16vw,78px);margin:22px 0}.home-hero{padding:42px 20px 30px}.hero-sub{font-size:14px;line-height:1.85}.hero-actions button{padding:11px 13px;min-height:44px;font-size:11px}.hero-stats{gap:24px;justify-content:space-between;margin-top:28px}.hstat-val{font-size:26px}.hstat-label{font-size:8px;letter-spacing:.05em}.vault-strip{margin-inline:20px;padding:22px 20px}.vault-strip strong{font-size:17px}.vault-strip-actions{gap:7px}.vault-btn,.quick-filter{font-size:11px;min-height:40px}.home-section{padding:22px 20px 38px}.home-grid{gap:11px}.hcard{padding:20px 16px!important;min-height:195px}.hcard-title{font-size:14px}.hcard-desc{font-size:11px;line-height:1.7}.hcard::after{right:14px;top:19px}.category-count{font-size:9px;margin-top:16px}.page-header{padding:34px 20px 22px}.page-title{font-size:29px}.browser-wrap{padding:20px 16px 40px}.browser-toolbar{gap:8px}.browser-search{flex-basis:100%;max-width:none}.browser-total{margin-left:0}.vault-filters{padding:10px;gap:7px}.provider-filter{max-width:160px}.file-grid,[data-density="compact"] .file-grid{grid-template-columns:1fr;gap:12px}.resource-wrap .file-card{min-height:160px;padding:22px 20px;gap:12px}.file-card .fc-name{font-size:13px;line-height:1.6}.file-card .fc-icon{font-size:29px;margin:0}.file-grid.list-view .resource-wrap .file-card{min-height:92px;padding-right:94px;flex-wrap:wrap}.file-grid.list-view .fc-name{flex-basis:calc(100% - 50px)}.file-grid.list-view .fc-meta{margin-left:44px;max-width:none}.file-grid.list-view .resource-actions{top:22px}.vault-footer{margin-inline:20px;gap:12px}.vault-footer>div{min-width:0;flex-basis:100%}.vault-dialog{padding:24px 21px}.vault-dialog.settings-dialog h2{font-size:30px}.settings-row{gap:12px}.settings-row select{max-width:120px}.settings-row small{font-size:11px}.settings-row input{width:23px;height:23px}.library-status{margin-top:12px}.empty-state{padding:38px 20px}}
+
 </style>
 
 <body>
@@ -1777,8 +1792,8 @@ body{background:var(--bg);font-size:14px}
   <div class="home-hero">
     <div>
       <div class="hero-eyebrow"><span class="hero-eyebrow-dot"></span>Editing Resources Vault</div>
-      <h1 class="hero-title">satvrn<br>backup</h1>
-      <p class="hero-sub">Plugins, presets, software and guides for After Effects and Premiere editors.</p>
+      <h1 class="hero-title">satvrn<br><span>the vault.</span></h1>
+      <p class="hero-sub">Your next edit starts here. A curated library of plugins, extensions, presets and creative tools — all in one place.</p><span class="library-status">A library built for creators</span>
       <div class="hero-actions">
         <button class="btn-primary ripple-host" id="btn-guide"><i class="ti ti-book-2"></i> Beginner's Guide</button>
         <button class="btn-ghost ripple-host" id="btn-archive"><i class="ti ti-folders"></i> Archive</button>
@@ -1786,7 +1801,7 @@ body{background:var(--bg);font-size:14px}
       </div>
       <div class="hero-stats">
         <div class="hstat"><span class="hstat-val" id="stat-files">—</span><span class="hstat-label">Files</span></div>
-        <div class="hstat"><span class="hstat-val" id="stat-size">—</span><span class="hstat-label">Total size</span></div>
+        <div class="hstat"><span class="hstat-val" id="stat-size">—</span><span class="hstat-label">Known size</span></div>
         <div class="hstat"><span class="hstat-val" id="stat-online">—</span><span class="hstat-label">Downloads available</span></div>
       </div>
     </div>
@@ -2087,8 +2102,8 @@ body{background:var(--bg);font-size:14px}
   </div>
 </div>
 
-<dialog class="vault-dialog" id="resource-dialog" aria-labelledby="detail-name"><div class="dialog-top"><span class="dialog-label">RESOURCE / SATVRN VAULT</span><button class="vault-btn" id="detail-close" aria-label="Close details">✕</button></div><h2 id="detail-name"></h2><p class="detail-path" id="detail-path"></p><div class="detail-facts"><span id="detail-size"></span><span id="detail-status"></span></div><div class="detail-links" id="detail-links"></div><p class="detail-note" id="detail-note"></p></dialog><footer class="vault-footer"><div><strong>SATVRN / Editing Resources Vault</strong><span>Downloads hosted externally · No site account required</span><span>Ctrl / ⌘ K to search · Esc to close</span></div><a class="vault-btn" id="export-missing" href="./file-mancanti.txt" download="satvrn-missing-files.txt">Download missing files list ↓</a><button class="vault-btn" type="button" data-open-settings>Settings</button><button class="vault-btn" id="vault-top">Back to top ↑</button></footer>
-<dialog class="vault-dialog settings-dialog" id="settings-dialog" aria-labelledby="settings-title"><div class="dialog-top"><span class="dialog-label">YOUR VAULT / YOUR WAY</span><button class="vault-btn" id="settings-close" aria-label="Close settings">✕</button></div><h2 id="settings-title">Make it yours.</h2><p class="settings-intro">A quieter view, a denser library, your preferred theme. Saved on this device.</p><div class="settings-grid"><label class="settings-row"><span><strong>Theme</strong><small>Choose your workspace lighting.</small></span><select id="settings-theme"><option value="dark">Dark</option><option value="light">Light</option></select></label><label class="settings-row"><span><strong>Card spacing</strong><small>Fit more resources in your view.</small></span><select id="settings-density"><option value="comfortable">Comfortable</option><option value="compact">Compact</option></select></label><label class="settings-row"><span><strong>Reduce motion</strong><small>Pause the animated background and transitions. System preferences are always respected.</small></span><input id="settings-motion" type="checkbox"></label></div><div class="settings-privacy"><span class="settings-kicker">PRIVATE BY DESIGN</span><p>No site account. No analytics. Preferences and favorites stay in your browser. Downloads open on external providers.</p><span id="settings-favorites-count"></span></div><button class="vault-btn" id="settings-reset">Reset display settings</button></dialog>
+<dialog class="vault-dialog" id="resource-dialog" aria-labelledby="detail-name"><div class="dialog-top"><span class="dialog-label">RESOURCE / SATVRN VAULT</span><button class="vault-btn" id="detail-close" aria-label="Close details">✕</button></div><h2 id="detail-name"></h2><p class="detail-path" id="detail-path"></p><div class="detail-facts"><span id="detail-size"></span><span id="detail-status"></span></div><div class="detail-links" id="detail-links"></div><p class="detail-note" id="detail-note"></p></dialog><footer class="vault-footer"><div><strong>SATVRN / Editing Resources Vault</strong><span>Downloads hosted externally · No site account required</span><span>Ctrl / ⌘ K to search · Esc to close</span></div><a class="vault-btn" id="export-missing" href="./catalog.json" download="satvrn-library.json">Export library links ↓</a><button class="vault-btn" type="button" data-open-settings>Settings</button><button class="vault-btn" id="vault-top">Back to top ↑</button></footer>
+<dialog class="vault-dialog settings-dialog" id="settings-dialog" aria-labelledby="settings-title"><div class="dialog-top"><span class="dialog-label">YOUR VAULT / YOUR WAY</span><button class="vault-btn" id="settings-close" aria-label="Close settings">✕</button></div><h2 id="settings-title">Make it yours.</h2><p class="settings-intro">A quieter view, a denser library, your preferred theme. Saved on this device.</p><div class="settings-grid"><label class="settings-row"><span><strong>Theme</strong><small>Choose your workspace lighting.</small></span><select id="settings-theme"><option value="dark">Dark</option><option value="light">Light</option></select></label><label class="settings-row"><span><strong>Card spacing</strong><small>Fit more resources in your view.</small></span><select id="settings-density"><option value="comfortable">Comfortable</option><option value="compact">Compact</option></select></label><label class="settings-row"><span><strong>Reduce motion</strong><small>Pause the animated background and transitions. System preferences are always respected.</small></span><input id="settings-motion" type="checkbox"></label></div><div class="settings-privacy"><span class="settings-kicker">PRIVATE BY DESIGN</span><p>No site account. No analytics. Preferences and favorites stay in your browser. Downloads open on external providers.</p><span id="settings-favorites-count"></span></div><div class="settings-data-actions"><button class="vault-btn" id="settings-export-library">Export library links</button><button class="vault-btn" id="settings-export-favorites">Export favorites</button></div><button class="vault-btn" id="settings-reset">Reset display settings</button></dialog>
 <!-- TOAST -->
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -2167,9 +2182,9 @@ document.querySelectorAll('.ripple-host').forEach(addRipple);
 
 /* ─── THEME ─── */
 var THEME_KEY='satvrn_theme';
-function getTheme(){return (storageRead(THEME_KEY,'dark')==='light'?'light':'dark')}
+function getTheme(){if(vaultThemeSession==='light'||vaultThemeSession==='dark')return vaultThemeSession;return storageRead(THEME_KEY,'dark')==='light'?'light':'dark'}
 function setTheme(t){
-  document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem(THEME_KEY,JSON.stringify(t))}catch(e){}
+  vaultThemeSession=t;document.documentElement.setAttribute('data-theme',t);try{localStorage.setItem(THEME_KEY,JSON.stringify(t))}catch(e){}
   var lbl=document.getElementById('mobile-theme-label'),ico=document.getElementById('mobile-theme-icon');
   if(lbl)lbl.textContent=t==='dark'?'Light mode':'Dark mode';
   if(ico)ico.className=t==='dark'?'ti ti-sun':'ti ti-moon';
@@ -2180,8 +2195,8 @@ document.getElementById('mobile-theme-btn').addEventListener('click',function(){
 
 function showToast(msg,green,red){var t=document.getElementById('toast');t.textContent=msg;t.className='toast show'+(green?' green':red?' red':'');clearTimeout(t._t);t._t=setTimeout(function(){t.className='toast'},3000)}
 /* ─── MOBILE NAV ─── */
-function openMobileNav(){document.getElementById('mobile-nav-overlay').classList.add('open');document.body.style.overflow='hidden'}
-function closeMobileNav(){document.getElementById('mobile-nav-overlay').classList.remove('open');document.body.style.overflow=''}
+function openMobileNav(){var menu=document.getElementById('mobile-nav-overlay');menu.inert=false;menu.setAttribute('aria-hidden','false');menu.classList.add('open');document.getElementById('btn-hamburger').setAttribute('aria-expanded','true');document.body.style.overflow='hidden';document.getElementById('mobile-search-input').focus()}
+function closeMobileNav(){var menu=document.getElementById('mobile-nav-overlay'),wasOpen=menu.classList.contains('open');menu.classList.remove('open');menu.setAttribute('aria-hidden','true');menu.inert=true;document.getElementById('btn-hamburger').setAttribute('aria-expanded','false');document.body.style.overflow='';if(wasOpen)document.getElementById('btn-hamburger').focus()}
 
 /* ─── TRANSFER MONITOR ─── */
 var hudAbortCtrl=null;
@@ -2200,7 +2215,7 @@ function downloadWithTelemetry(url,filename){
 }
 function fileDownloadUrl(rel){
   var found='';
-  function walk(nodes){(nodes||[]).some(function(n){if(n.rel===rel&&n.links&&n.links.length){found=n.links[0].url;return true}if(n.children)walk(n.children);return!!found})}
+  function walk(nodes){(nodes||[]).some(function(n){if(n.rel===rel&&n.links&&n.links.length){found=vaultSelectedLink(n).url;return true}if(n.children)walk(n.children);return!!found})}
   walk(fileTree);return found;
 }
 function escapeHTML(value){return String(value).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
@@ -2213,10 +2228,10 @@ function buildSearchIndex(nodes,path){nodes.forEach(function(n){searchIndex.push
 function getIcon(item){
   if(item.type==='folder')return{cls:'ti-folder-filled',color:'#f5a623'};
   var ext=(item.name.split('.').pop()||'').toLowerCase();
-  var m={mp4:{cls:'ti-file-type-mp4',color:'#f87171'},mov:{cls:'ti-file-type-mp4',color:'#f87171'},avi:{cls:'ti-file-type-mp4',color:'#f87171'},mkv:{cls:'ti-file-type-mp4',color:'#f87171'},mp3:{cls:'ti-file-type-mp3',color:'#a898ff'},wav:{cls:'ti-file-type-mp3',color:'#a898ff'},png:{cls:'ti-file-type-png',color:'#2dd68c'},jpg:{cls:'ti-file-type-jpg',color:'#2dd68c'},jpeg:{cls:'ti-file-type-jpg',color:'#2dd68c'},gif:{cls:'ti-photo',color:'#2dd68c'},zip:{cls:'ti-file-zip',color:'#f5a524'},rar:{cls:'ti-file-zip',color:'#f5a524'},'7z':{cls:'ti-file-zip',color:'#f5a524'},aep:{cls:'ti-brand-adobe',color:'#7c6aee'},jsx:{cls:'ti-code',color:'#5aaff5'},ffx:{cls:'ti-wand',color:'#e86eb4'},exe:{cls:'ti-settings',color:'#8888aa'},dmg:{cls:'ti-brand-apple',color:'#8888aa'},pkg:{cls:'ti-package',color:'#8888aa'}};
+  var m={mp4:{cls:'ti-movie',color:'#f87171'},mov:{cls:'ti-movie',color:'#f87171'},avi:{cls:'ti-movie',color:'#f87171'},mkv:{cls:'ti-movie',color:'#f87171'},mp3:{cls:'ti-file-music',color:'#a898ff'},wav:{cls:'ti-file-music',color:'#a898ff'},png:{cls:'ti-file-type-png',color:'#2dd68c'},jpg:{cls:'ti-file-type-jpg',color:'#2dd68c'},jpeg:{cls:'ti-file-type-jpg',color:'#2dd68c'},gif:{cls:'ti-photo',color:'#2dd68c'},zip:{cls:'ti-file-zip',color:'#f5a524'},rar:{cls:'ti-file-zip',color:'#f5a524'},'7z':{cls:'ti-file-zip',color:'#f5a524'},aep:{cls:'ti-brand-adobe',color:'#7c6aee'},jsx:{cls:'ti-code',color:'#5aaff5'},ffx:{cls:'ti-wand',color:'#e86eb4'},exe:{cls:'ti-settings',color:'#8888aa'},dmg:{cls:'ti-brand-apple',color:'#8888aa'},pkg:{cls:'ti-package',color:'#8888aa'}};
   return m[ext]||{cls:'ti-file',color:'#8888aa'}
 }
-function runSearch(q){if(!q.trim()||!searchIndex.length)return[];var ql=q.toLowerCase();return searchIndex.filter(function(item){return item.name.toLowerCase().indexOf(ql)!==-1||item.path.toLowerCase().indexOf(ql)!==-1}).slice(0,10)}
+function runSearch(q){if(!q.trim()||!searchIndex.length)return[];return searchIndex.filter(function(item){return vaultQueryMatch(item,q)}).slice(0,20)}
 function loadTree(cb){
   if(fileTree){if(!searchIndex.length){searchIndex=[];buildSearchIndex(fileTree,'')}cb&&cb(null,fileTree);return}
   if(cb)treeCallbacks.push(cb);if(treeLoading)return;treeLoading=true;
@@ -2234,12 +2249,7 @@ function renderSearchDropdown(results,container,onSelect){
     row.addEventListener('click',function(){onSelect(item)});container.appendChild(row)
   })
 }
-function filterHomeCards(q){
-  if(currentPage!=='home')return;
-  var cards=document.querySelectorAll('.hcard');var anyVisible=false;var ql=(q||'').toLowerCase().trim();
-  cards.forEach(function(card){var tags=(card.dataset.tags||'').toLowerCase();var title=(card.querySelector('.hcard-title')||{}).textContent||'';var match=!ql||tags.indexOf(ql)!==-1||title.toLowerCase().indexOf(ql)!==-1;card.classList.toggle('hidden',!match);if(match)anyVisible=true});
-  document.getElementById('home-grid-empty').classList.toggle('show',!anyVisible&&!!ql)
-}
+function filterHomeCards(q){vaultCategorySearch(q)}
 
 /* ─── FILE BROWSER ─── */
 var currentPath=[];
@@ -2255,7 +2265,7 @@ var browserMeta={
 };
 function apiHeaders(){return{}}
 function nodesAtPath(tree,pathArr){if(!pathArr.length)return tree;var nodes=tree;for(var i=0;i<pathArr.length;i++){var part=pathArr[i],found=null;for(var j=0;j<nodes.length;j++){if(nodes[j].rel===part.rel||nodes[j].name===part.name){found=nodes[j];break}}if(!found||!found.children)return[];nodes=found.children}return nodes}
-function formatSize(b){if(!b)return'0 B';var units=['B','KB','MB','GB'],i=0,v=b;while(v>=1024&&i<units.length-1){v/=1024;i++}return(i===0?v:v.toFixed(1))+' '+units[i]}
+function formatSize(b){if(!b)return'0 B';var units=['B','KB','MB','GB'],i=0,v=b;while(v>=1000&&i<units.length-1){v/=1000;i++}return(i===0?v:v.toFixed(1))+' '+units[i]}
 function sortNodes(nodes){
   var folders=nodes.filter(function(n){return n.type==='folder'}),files=nodes.filter(function(n){return n.type!=='folder'});
   var desc=currentSort.indexOf('-desc')!==-1,key=currentSort.replace('-desc','');
@@ -2271,10 +2281,10 @@ function renderFiles(){
     if(err||!tree){grid.innerHTML='<div class="empty-state"><i class="ti ti-wifi-off"></i>Could not load files.</div>';return}
     var nodes=vaultNodesForView(nodesAtPath(tree,currentPath));
     if(!nodes||!nodes.length){grid.innerHTML='<div class="empty-state"><i class="ti ti-folder-off"></i>Empty folder.</div>';return}
-    var filtered=nodes.filter(function(n){return vaultMatches(n)&&(!browserFilter||n.name.toLowerCase().indexOf(browserFilter.toLowerCase())!==-1)});document.getElementById('filter-summary').textContent=filtered.length+' results';
+    var filtered=nodes.filter(function(n){return vaultMatches(n)&&(!browserFilter||vaultQueryMatch(n,browserFilter))});document.getElementById('filter-summary').textContent=filtered.length+' results';
     var sorted=sortNodes(filtered.slice());
     if(!sorted.length){grid.innerHTML='<div class="empty-state"><i class="ti ti-check"></i>'+(vaultAvailability==='pending'?'All caught up. Every resource has a download link.':'No files match.')+'</div>';return}
-    var totalBytes=0,fileCount=0;sorted.forEach(function(n){if(n.type!=='folder'){totalBytes+=n.size||0;fileCount++}});
+    var totalBytes=0,fileCount=0;flattenVault(sorted).filter(vaultMatches).forEach(function(n){totalBytes+=n.size||0;fileCount++});
     var tot=document.getElementById('browser-total');tot.style.display='flex';
     document.getElementById('browser-count-label').textContent=fileCount+' file'+(fileCount===1?'':'s');
     document.getElementById('browser-size-label').textContent=formatSize(totalBytes);
@@ -2282,7 +2292,7 @@ function renderFiles(){
     sorted.forEach(function(item,idx){
       var card=document.createElement('button');card.className='file-card ripple-host';card.title=item.name;
       card.style.animationDelay=(idx*.022)+'s';card.style.animation='card-rise .38s cubic-bezier(.22,1,.36,1) both';
-      var ico=getIcon(item);var meta=item.type==='folder'?(item.children?item.children.length:0)+' items':resourceSize(item)+' · '+(item.status==='ready'?'Download · '+escapeHTML(item.links[0].provider):item.status==='awaiting-link'?'Uploaded to MEGA · link awaiting assignment':item.status==='unavailable'?'Temporarily unavailable':'Awaiting upload');
+      var ico=getIcon(item);var meta=item.type==='folder'?(item.children?item.children.length:0)+' items':resourceSize(item)+' · '+(item.status==='ready'?'Download · '+escapeHTML(vaultSelectedLink(item).provider):item.status==='awaiting-link'?'Uploaded to MEGA · link awaiting assignment':item.status==='unavailable'?'Temporarily unavailable':'Awaiting upload');
       card.innerHTML='<div class="dl-progress"><div class="dl-progress-bar" id="dlbar-'+idx+'"></div></div><div class="fc-icon"><i class="ti '+ico.cls+'" style="color:'+ico.color+'"></i></div><div class="fc-name" title="'+escapeHTML(item.name)+'">'+escapeHTML(item.name)+'</div><div class="fc-meta">'+meta+'</div>';
       addRipple(card);
       if(item.type==='folder'){
@@ -2317,10 +2327,11 @@ function openCtxMenu(x,y){var m=document.getElementById('ctx-menu');m.classList.
 function closeCtxMenu(){document.getElementById('ctx-menu').classList.remove('open')}
 document.addEventListener('click',function(){closeCtxMenu()});
 document.getElementById('ctx-download').addEventListener('click',function(){if(ctxTarget)downloadWithTelemetry(fileDownloadUrl(ctxTarget.rel),ctxTarget.name)});
-document.getElementById('ctx-copy-link').addEventListener('click',function(){if(ctxTarget&&fileDownloadUrl(ctxTarget.rel))navigator.clipboard.writeText(new URL(fileDownloadUrl(ctxTarget.rel),location.href).href).then(function(){showToast('Link copied!',true)})});
+document.getElementById('ctx-copy-link').addEventListener('click',function(){if(ctxTarget&&fileDownloadUrl(ctxTarget.rel))vaultCopyLink(new URL(fileDownloadUrl(ctxTarget.rel),location.href).href)});
 document.getElementById('ctx-open-folder').addEventListener('click',function(){if(ctxTarget&&currentPath.length>0){currentPath=currentPath.slice(0,-1);renderBreadcrumb();renderFiles()}});
 
-function goBrowser(sub){
+function goBrowser(sub,preserveFilters){
+ if(!preserveFilters){vaultAvailability='all';vaultProvider='all';vaultOnlyFavorites=false;syncVaultFilters()}
   closeMobileNav();var meta=browserMeta[sub]||browserMeta.archive;
   document.getElementById('browser-title').textContent=meta.title;document.getElementById('browser-sub').textContent=meta.sub;
   showPage('browser');document.getElementById(meta.nav).classList.add('active');
@@ -2372,12 +2383,12 @@ function isSafeResourceUrl(value){if(typeof value!=="string"||value.length>2048)
 function validateVaultCatalog(tree){var total=0,seen=new Set();function scan(nodes,depth){if(!Array.isArray(nodes)||depth>10)throw Error('Invalid catalog');nodes.forEach(function(n){if(++total>5000||!n||typeof n.name!=='string'||n.name.length>500||typeof n.rel!=='string'||n.rel.length>1000||seen.has(n.rel))throw Error('Invalid resource');seen.add(n.rel);if(n.children)scan(n.children,depth+1);else{if(!["ready","pending","awaiting-link","unavailable"].includes(n.status)||!Number.isSafeInteger(n.size)||n.size<0||!Array.isArray(n.links)||n.links.length>10)throw Error('Invalid metadata');n.links.forEach(function(l){if(!l||typeof l.provider!=='string'||l.provider.length>40||!isSafeResourceUrl(l.url)||!vaultProviderMatches(l))throw Error('Invalid download destination')});if(n.status==='ready'&&!n.links.length)throw Error('Missing ready link')}})}scan(tree,0);return tree}
 function flattenVault(nodes){var out=[];(nodes||[]).forEach(function(n){if(n.children)out=out.concat(flattenVault(n.children));else out.push(n)});return out}
 function vaultMatches(n){if(n.children)return flattenVault(n.children).some(vaultMatches);return(vaultAvailability==='all'||(vaultAvailability==='ready'?n.status==='ready':n.status!=='ready'))&&(vaultAvailability==='pending'||vaultProvider==='all'||n.links.some(function(l){return l.provider===vaultProvider}))&&(!vaultOnlyFavorites||vaultFavorites.indexOf(n.rel)!==-1)}
-function vaultNodesForView(nodes){return vaultAvailability==='pending'?flattenVault(nodes):nodes}
+function vaultNodesForView(nodes){return vaultAvailability!=='all'||vaultProvider!=='all'||vaultOnlyFavorites?flattenVault(nodes):nodes}
 function setVaultAvailability(value){vaultAvailability=value;if(value==='pending'){vaultProvider='all';vaultOnlyFavorites=false;browserFilter='';document.getElementById('browser-filter-input').value=''}syncVaultFilters();renderFiles()}
 function toggleFavorite(rel){var i=vaultFavorites.indexOf(rel);if(i===-1)vaultFavorites.push(rel);else vaultFavorites.splice(i,1);saveFavorites();renderFiles();showToast(i===-1?'Added to favorites':'Removed from favorites',true)}
 function enhanceResourceCard(card,item){if(item.children)return card;var wrap=document.createElement('div');wrap.className='resource-wrap';wrap.appendChild(card);var tools=document.createElement('div');tools.className='resource-actions';var fav=document.createElement('button');fav.type='button';fav.className='resource-tool';fav.textContent='★';fav.title='Save to favorites';fav.setAttribute('aria-label','Favorite: '+item.name);fav.setAttribute('aria-pressed',String(vaultFavorites.indexOf(item.rel)!==-1));fav.addEventListener('click',function(){toggleFavorite(item.rel)});var detail=document.createElement('button');detail.type='button';detail.className='resource-tool';detail.textContent='↗';detail.title='Details and alternate links';detail.setAttribute('aria-label','Details: '+item.name);detail.addEventListener('click',function(){showResourceDetails(item)});tools.append(fav,detail);wrap.appendChild(tools);return wrap}
 function showResourceDetails(item){var dialog=document.getElementById('resource-dialog');document.getElementById('detail-name').textContent=item.name;document.getElementById('detail-path').textContent=item.rel.split('/').slice(0,-1).join(' / ');document.getElementById('detail-size').textContent=resourceSize(item);document.getElementById('detail-status').textContent=item.status==='ready'?'Available':'Awaiting upload';var links=document.getElementById('detail-links');links.replaceChildren();item.links.forEach(function(l){if(!isSafeResourceUrl(l.url))return;var a=document.createElement('a');a.className='detail-link';a.href=l.url;a.target='_blank';a.rel='noopener noreferrer';var name=document.createElement('span');name.textContent='Download from '+l.provider;var arrow=document.createElement('span');arrow.textContent='↗';a.append(name,arrow);links.appendChild(a)});document.getElementById('detail-note').textContent=item.links.length?'The download opens on your chosen provider. Archive password, if required: star.':'This archive is listed in the catalog but has not been uploaded yet.';dialog.showModal()}
-function openVaultFilter(availability,favorites){vaultAvailability=availability;vaultOnlyFavorites=!!favorites;vaultProvider='all';syncVaultFilters();goBrowser('archive')}
+function openVaultFilter(availability,favorites){vaultAvailability=availability;vaultOnlyFavorites=!!favorites;vaultProvider='all';syncVaultFilters();goBrowser('archive',true)}
 function syncVaultFilters(){document.querySelectorAll('[data-availability]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.availability===vaultAvailability))});document.getElementById('favorites-filter').setAttribute('aria-pressed',String(vaultOnlyFavorites));var provider=document.getElementById('provider-filter');provider.value=vaultProvider;provider.disabled=vaultAvailability==='pending';provider.title=vaultAvailability==='pending'?'Files awaiting upload do not have a download provider yet.':'Filter by download provider'}
 function vaultCatalogLoaded(tree){var all=flattenVault(tree),ready=all.filter(function(n){return n.status==='ready'}).length,pending=all.length-ready;document.getElementById('vault-online-count').textContent=ready;document.getElementById('vault-pending-count').textContent=pending;document.querySelectorAll('.hcard').forEach(function(card){var sub=card.id.replace('hcard-','');if(!browserMeta[sub])return;var folder=browserMeta[sub].folder;var entries=folder?all.filter(function(n){return n.rel.split('/')[0]===folder}):all;var label=card.querySelector('.category-count');if(!label){label=document.createElement('span');label.className='category-count';card.appendChild(label)}label.textContent=entries.filter(function(n){return n.status==='ready'}).length+' / '+entries.length+' available'})}
 function setupVaultUpgrade(){
@@ -2406,7 +2417,7 @@ function applyVaultPreferences(){
 function saveVaultPreferences(){try{localStorage.setItem('satvrn_preferences',JSON.stringify(vaultPreferences))}catch(e){showToast('Settings could not be saved on this device.',false,true)}applyVaultPreferences()}
 function setupVaultSettings(){
  var panel=document.getElementById('settings-dialog');
- function open(){document.getElementById('settings-theme').value=getTheme();document.getElementById('settings-density').value=vaultPreferences.density==='compact'?'compact':'comfortable';document.getElementById('settings-motion').checked=vaultPreferences.reduceMotion===true;document.getElementById('settings-favorites-count').textContent=vaultFavorites.length+' saved favorites';panel.showModal()}
+ function open(){closeMobileNav();document.getElementById('settings-theme').value=getTheme();document.getElementById('settings-density').value=vaultPreferences.density==='compact'?'compact':'comfortable';document.getElementById('settings-motion').checked=vaultPreferences.reduceMotion===true;document.getElementById('settings-favorites-count').textContent=vaultFavorites.length+' saved favorites';panel.showModal()}
  document.querySelectorAll('[data-open-settings]').forEach(function(b){b.addEventListener('click',open)});
  document.getElementById('settings-close').addEventListener('click',function(){panel.close()});
  panel.addEventListener('click',function(e){if(e.target===panel){var r=panel.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)panel.close()}});
@@ -2417,6 +2428,39 @@ function setupVaultSettings(){
  applyVaultPreferences();
 }
 function resourceSize(item){return item.sizeUnknown?'Size not provided':formatSize(Number(item.size))}
+
+var vaultThemeSession;
+function vaultSelectedLink(item){return item.links.find(function(link){return vaultProvider!=='all'&&link.provider===vaultProvider})||item.links[0]}
+function vaultQueryMatch(item,query){
+ function normalize(s){return String(s||'').normalize('NFKC').toLowerCase().replace(/[_\.\-]+/g,' ').replace(/\s+/g,' ').trim()}
+ var haystack=normalize(item.name+' '+(item.path||''));
+ return normalize(query).split(' ').filter(Boolean).every(function(word){return haystack.indexOf(word)!==-1});
+}
+function vaultSaveJson(value,filename){
+ var blob=new Blob([JSON.stringify(value,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob);
+ var link=document.createElement('a');link.href=url;link.download=filename;document.body.appendChild(link);link.click();link.remove();setTimeout(function(){URL.revokeObjectURL(url)},1000);
+}
+function vaultCopyLink(value){
+ if(!isSafeResourceUrl(value)){showToast('No safe download link is available.',false,true);return}
+ if(!navigator.clipboard){showToast('Open Details to access the download link.',false,true);return}
+ navigator.clipboard.writeText(value).then(function(){showToast('Link copied!',true)}).catch(function(){showToast('Clipboard access was blocked. Use the link in Details.',false,true)});
+}
+function vaultCategorySearch(query){
+ var matched=0;
+ document.querySelectorAll('.hcard').forEach(function(card){var key=card.id.replace('hcard-',''),meta=browserMeta[key];var text=card.textContent.toLowerCase(),q=query.trim().toLowerCase();var resourceMatch=!!q&&meta&&searchIndex.some(function(item){return item.type!=='folder'&&(!meta.folder||item.rel.split('/')[0]===meta.folder)&&vaultQueryMatch(item,q)});var visible=!q||text.indexOf(q)!==-1||resourceMatch;card.classList.toggle('hidden',!visible);if(visible)matched++});
+ document.getElementById('home-grid-empty').classList.toggle('show',matched===0);
+}
+function setupVaultFinal(){
+ document.getElementById('desktop-search-input').addEventListener('keydown',function(e){if(e.key==='ArrowDown'){var row=document.querySelector('#search-dropdown.open .search-result-item');if(row){e.preventDefault();row.focus()}}});
+ var menu=document.getElementById('mobile-nav-overlay');menu.setAttribute('role','dialog');menu.setAttribute('aria-label','Navigation and search');menu.setAttribute('aria-modal','true');menu.setAttribute('aria-hidden','true');menu.inert=true;
+ document.getElementById('btn-hamburger').setAttribute('aria-expanded','false');
+ document.addEventListener('keydown',function(e){if(!menu.classList.contains('open'))return;if(e.key==='Escape'){e.preventDefault();closeMobileNav();return}if(e.key==='Tab'){var focusable=[...menu.querySelectorAll('button,input,select,a[href]')].filter(function(el){return !el.disabled&&el.getClientRects().length>0});if(!focusable.length)return;var first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&(document.activeElement===first||!menu.contains(document.activeElement))){e.preventDefault();last.focus()}else if(!e.shiftKey&&(document.activeElement===last||!menu.contains(document.activeElement))){e.preventDefault();first.focus()}}});
+ document.getElementById('settings-export-favorites').addEventListener('click',function(){vaultSaveJson({schema:1,favorites:vaultFavorites},'satvrn-favorites.json')});
+ document.getElementById('settings-export-library').addEventListener('click',function(){loadTree(function(err,tree){if(err){showToast('The library could not be loaded. Please retry.',false,true);return}vaultSaveJson({schema:1,exportedAt:new Date().toISOString(),resources:flattenVault(tree)},'satvrn-library.json')})});
+ document.getElementById('settings-theme').addEventListener('change',function(){document.querySelector('meta[name="theme-color"]').content=this.value==='light'?'#f5f3fa':'#0c0d17'});
+ document.getElementById('view-grid-btn').setAttribute('aria-label','Grid view');document.getElementById('view-list-btn').setAttribute('aria-label','List view');
+ var retry=document.createElement('button');retry.type='button';retry.className='vault-btn';retry.textContent='Reload library';retry.addEventListener('click',function(){fileTree=null;searchIndex=[];loadTree(function(err,tree){if(err){showToast('Could not reload the library. Check your connection.',false,true);return}updateHeroStats(tree);vaultCatalogLoaded(tree);if(currentPage==='browser')renderFiles();showToast('Library refreshed.',true)})});document.querySelector('.settings-data-actions').appendChild(retry);
+}
 
 var appInited=false;
 function init(){
@@ -2452,10 +2496,10 @@ function init(){
 
   /* Desktop search */
   var dInput=document.getElementById('desktop-search-input'),dDropdown=document.getElementById('search-dropdown'),dClear=document.getElementById('search-clear-btn'),dKbd=document.getElementById('search-kbd-wrap'),searchWrap=document.getElementById('search-wrap'),dTimer;
-  function doDesktopSearch(q){if(!q){dDropdown.classList.remove('open');filterHomeCards('');return}filterHomeCards(q);if(!searchIndex.length){loadTree(function(err){if(err){dDropdown.classList.remove('open');return}renderSearchDropdown(runSearch(dInput.value),dDropdown,onSearchSelect);if(dInput.value)dDropdown.classList.add('open')})}else{renderSearchDropdown(runSearch(q),dDropdown,onSearchSelect);dDropdown.classList.add('open')}}
+  function doDesktopSearch(q){if(!q){dDropdown.classList.remove('open');filterHomeCards('');return}filterHomeCards(q);if(!searchIndex.length){loadTree(function(err){if(err){dDropdown.classList.remove('open');return}filterHomeCards(dInput.value);renderSearchDropdown(runSearch(dInput.value),dDropdown,onSearchSelect);if(dInput.value)dDropdown.classList.add('open')})}else{renderSearchDropdown(runSearch(q),dDropdown,onSearchSelect);dDropdown.classList.add('open')}}
   function onSearchSelect(item){dDropdown.classList.remove('open');dInput.value='';searchWrap.classList.remove('focused');dClear.classList.remove('visible');if(dKbd)dKbd.style.display='';filterHomeCards('');resolveSearchNav(item)}
   dInput.addEventListener('focus',function(){searchWrap.classList.add('focused');if(dKbd&&dInput.value)dKbd.style.display='none';loadTree(function(){});if(dInput.value&&dDropdown.innerHTML)dDropdown.classList.add('open')});
-  dInput.addEventListener('blur',function(){if(!dInput.value)searchWrap.classList.remove('focused');setTimeout(function(){if(!dDropdown.matches(':hover'))dDropdown.classList.remove('open')},150)});
+  dInput.addEventListener('blur',function(){if(!dInput.value)searchWrap.classList.remove('focused');setTimeout(function(){if(!dDropdown.matches(':hover')&&!searchWrap.contains(document.activeElement)&&!dDropdown.contains(document.activeElement))dDropdown.classList.remove('open')},150)});
   dInput.addEventListener('input',function(){var q=dInput.value;dClear.classList.toggle('visible',!!q);if(dKbd)dKbd.style.display=q?'none':'';clearTimeout(dTimer);dTimer=setTimeout(function(){doDesktopSearch(q)},160)});
   dClear.addEventListener('click',function(){dInput.value='';dClear.classList.remove('visible');if(dKbd)dKbd.style.display='';dDropdown.classList.remove('open');searchWrap.classList.remove('focused');filterHomeCards('');dInput.focus()});
   document.addEventListener('click',function(e){if(!document.getElementById('topnav-search').contains(e.target)){dDropdown.classList.remove('open');if(!dInput.value)searchWrap.classList.remove('focused')}});
@@ -2467,7 +2511,7 @@ function init(){
 
   /* Keyboard shortcuts */
   document.addEventListener('keydown',function(e){
-    if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();dInput.focus();dInput.select()}
+    if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();if(matchMedia('(max-width:1180px)').matches){openMobileNav();mInput.focus()}else{dInput.focus();dInput.select()}}
     if((e.metaKey||e.ctrlKey)&&e.shiftKey&&e.key.toLowerCase()==='l'){e.preventDefault();var n=getTheme()==='dark'?'light':'dark';setTheme(n);showToast(n==='light'?'Light mode on':'Dark mode on',true)}
     if(e.key==='Escape'){dDropdown.classList.remove('open');dInput.blur();searchWrap.classList.remove('focused')}
   });
@@ -2478,7 +2522,7 @@ function init(){
   document.getElementById('mobile-nav-drawer').addEventListener('touchend',function(e){if(startX-e.changedTouches[0].clientX>55)closeMobileNav()},{passive:true});
 
   loadTree(function(){});
-  setupToc();setupVaultUpgrade();setupVaultSettings()
+  setupToc();setupVaultUpgrade();setupVaultSettings();setupVaultFinal()
 }
 document.getElementById('topnav').style.display='flex';init();
 })();

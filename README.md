@@ -1,7 +1,12 @@
-# SATVRN Vault
+# SATVRN
 
-Sito statico con catalogo di 217 risorse. I pulsanti attivi aprono soltanto download caricati e verificati; gli altri indicano che il trasferimento deve ancora essere completato.
+English static resource library for GitHub Pages.
 
-Per pubblicare: Settings → Pages → Deploy from a branch → main → / (root) → Save.
+## Restore on another host
+Copy index.html, catalog.json, assets/ and .nojekyll to any static HTTPS host. Keep relative paths intact. No server credentials or local computer are required for the website. Download archives are hosted separately; preserve independent copies of your originals because each provider has its own availability and policies.
 
-Il sito contiene HTML e catalogo: gli archivi sono ospitati su servizi esterni per evitare di appesantire il repository.
+## Security
+Inline scripts are restricted by content hashes. Downloads use validated HTTPS provider links. Icons are bundled locally with integrity verification. The public site contains no passwords, account access tokens or local source paths.
+
+## Icons
+Tabler Icons 3.7.0, MIT license: assets/LICENSE-tabler.txt. The webfont is subset to the icons used by this site.
