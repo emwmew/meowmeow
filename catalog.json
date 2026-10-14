@@ -920,6 +920,51 @@
         ],
         "status": "ready",
         "downloadType": "external"
+      },
+      {
+        "name": "YUHHTA_OneFramers_LICENSED.jsx",
+        "rel": "extension/YUHHTA_OneFramers_LICENSED.jsx",
+        "type": "file",
+        "size": 30487,
+        "sizeUnknown": false,
+        "links": [
+          {
+            "provider": "MediaFire",
+            "url": "https://www.mediafire.com/file/lt4joexp33gzgn2/YUHHTA_OneFramers_LICENSED.jsx/file"
+          }
+        ],
+        "status": "ready",
+        "downloadType": "external"
+      },
+      {
+        "name": "YUHHTA_ShapeStudio_LICENSED.jsx",
+        "rel": "extension/YUHHTA_ShapeStudio_LICENSED.jsx",
+        "type": "file",
+        "size": 74726,
+        "sizeUnknown": false,
+        "links": [
+          {
+            "provider": "MediaFire",
+            "url": "https://www.mediafire.com/file/ievl6msd7tf4xj0/YUHHTA_ShapeStudio_LICENSED.jsx/file"
+          }
+        ],
+        "status": "ready",
+        "downloadType": "external"
+      },
+      {
+        "name": "yuhhta.zip",
+        "rel": "extension/yuhhta.zip",
+        "type": "file",
+        "size": 48942,
+        "sizeUnknown": false,
+        "links": [
+          {
+            "provider": "MediaFire",
+            "url": "https://www.mediafire.com/file/60z4eq2ezeqrdo1/yuhhta.zip/file"
+          }
+        ],
+        "status": "ready",
+        "downloadType": "external"
       }
     ]
   },
@@ -2802,6 +2847,21 @@
           {
             "provider": "MEGA",
             "url": "https://mega.nz/file/26QxlSZb#F2e6_Q58IAi_RXq2L68u6CUDGoY1amK-2vLB2abuv0I"
+          }
+        ],
+        "status": "ready",
+        "downloadType": "external"
+      },
+      {
+        "name": "REVisionFX.Effections.Plus.v25.08 - Win - Keyflame.7z",
+        "rel": "plugin/REVisionFX.Effections.Plus.v25.08 - Win - Keyflame.7z",
+        "type": "file",
+        "size": 163575713,
+        "sizeUnknown": false,
+        "links": [
+          {
+            "provider": "MediaFire",
+            "url": "https://www.mediafire.com/file/hz85tm93yahyuyx/REVisionFX.Effections.Plus.v25.08_-_Win_-_Keyflame.7z/file"
           }
         ],
         "status": "ready",
